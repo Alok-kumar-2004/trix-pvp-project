@@ -11,6 +11,8 @@
             padding: 2em;
             margin: 0;
         }
+
+        /* Fade-in effect for container */
         .container {
             max-width: 600px;
             margin: auto;
@@ -19,7 +21,20 @@
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(8px);
+            animation: fadeIn 0.8s ease-out;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         h2 {
             margin-bottom: 0.8em;
             font-weight: 600;
@@ -27,6 +42,7 @@
             border-bottom: 2px solid #61dafb;
             padding-bottom: 0.3em;
         }
+
         input {
             width: 100%;
             padding: 10px 12px;
@@ -38,11 +54,15 @@
             font-size: 14px;
             outline: none;
             transition: all 0.3s ease;
+            transform: scale(1);
         }
+
         input:focus {
             background: #333842;
             box-shadow: 0 0 0 2px #61dafb;
+            transform: scale(1.02);
         }
+
         button {
             padding: 10px 20px;
             cursor: pointer;
@@ -52,20 +72,26 @@
             font-weight: bold;
             font-size: 14px;
             color: #1b1f23;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
+            transform: scale(1);
         }
+
         button:hover {
             background: #4fbfe0;
-            transform: translateY(-2px);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(97, 218, 251, 0.4);
         }
+
         button:active {
-            transform: translateY(0);
+            transform: scale(0.98);
         }
+
         hr {
             border: none;
             border-top: 1px solid #444;
             margin: 2em 0;
         }
+
         pre {
             background: #111;
             padding: 1em;
@@ -76,7 +102,13 @@
             line-height: 1.4;
             color: #d1d1d1;
             border: 1px solid #333;
+            transition: background 0.3s ease;
         }
+
+        pre:hover {
+            background: #181818;
+        }
+
         h3 {
             margin-top: 1.5em;
             color: #ffcc70;
