@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TriX Operator Panel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #1a1c20, #282c34);
+            color: #fff;
+            padding: 2em;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(32, 35, 42, 0.95);
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+        }
+        h2 {
+            margin-bottom: 0.8em;
+            font-weight: 600;
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 0.3em;
+        }
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 1em;
+            border: none;
+            border-radius: 6px;
+            background: #2c2f36;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        input:focus {
+            background: #333842;
+            box-shadow: 0 0 0 2px #61dafb;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #61dafb;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #1b1f23;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #4fbfe0;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 2em 0;
+        }
+        pre {
+            background: #111;
+            padding: 1em;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #d1d1d1;
+            border: 1px solid #333;
+        }
+        h3 {
+            margin-top: 1.5em;
+            color: #ffcc70;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Match</h2>
+        <input type="text" id="createMatchId" placeholder="Match ID (e.g., match-001)">
+        <input type="text" id="player1" placeholder="Player 1 Address">
+        <input type="text" id="player2" placeholder="Player 2 Address">
+        <input type="text" id="stake" placeholder="Stake Amount (e.g., 1 for 1 GT)">
+        <button id="createBtn">Create Match</button>
+
+        <hr>
+
+        <h2>Submit Result</h2>
+        <input type="text" id="resultMatchId" placeholder="Match ID (e.g., match-001)">
+        <input type="text" id="winner" placeholder="Winner Address">
+        <button id="submitBtn">Submit Result</button>
+
+        <h3>Status Log</h3>
+        <pre id="statusLog">Waiting for action...</pre>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

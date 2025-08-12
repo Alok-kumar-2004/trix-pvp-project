@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+/contracts/node_modules
+/api/node_modules
+
+# Environment variables
+.env
+/api/.env
+
+# Hardhat cache and artifacts
+/contracts/cache
+/contracts/artifacts
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
