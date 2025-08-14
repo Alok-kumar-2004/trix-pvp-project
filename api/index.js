@@ -3,7 +3,6 @@ const express = require('express');
 const { ethers } = require('ethers');
 require('dotenv').config(); // Loads the .env file
 
-// --- SETUP ---
 const app = express();
 app.use(express.json());
 app.use(cors()); 
